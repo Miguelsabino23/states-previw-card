@@ -1,0 +1,115 @@
+body {
+  font-size: 15px;
+  max-width: 1440px;
+  background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 20vh auto;
+  width: 800px;
+}
+
+.secaoPrincipal {
+  width: 400px;
+  background-color: hsl(244, 38%, 16%);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.secaoPrincipal__titulo {
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 30px;
+}
+.secaoPrincipal__titulo span{
+   color: hsl(277, 64%, 61%);
+}
+.secaoPrincipal__paragrafo {
+    font-size: 13px;
+    color: hsla(0, 0%, 100%, 0.6);
+    padding: 25px 0;
+    line-height: 23px;
+    width: 300px;
+    font-family: 'Inter', sans-serif;
+}
+
+.boxsInfo {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-top: 60px;
+    align-items: center;
+}
+.box {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+}
+.box__title {
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;font-weight: bold;
+    }
+.box_span {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 10px;
+}
+
+.imagem {
+    position: relative;
+}
+.imagem::after{
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    content: "";
+    position: absolute;
+    background-color: hsl(277, 64%, 61%);
+    opacity: .5;
+}
+.imagem img {
+  width: 400px;
+  height: 100%;
+}
+
+@media (max-width: 375px) {
+    .container {
+        flex-direction: column-reverse;
+        width: 300px;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .secaoPrincipal{
+        width: 300px;
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        align-items: center;
+    }
+    .secaoPrincipal__titulo{
+        text-align: center;
+        line-height: 35px;
+    }
+    .secaoPrincipal__paragrafo{
+        text-align: center;
+        width: 230px;
+    }
+    .boxsInfo{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .box{
+        margin-bottom: 30px;
+    }
+
+    .imagem::after{
+        border-radius: 10px 10px 0 0;
+    }
+    .imagem img{
+        width: 340px;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
